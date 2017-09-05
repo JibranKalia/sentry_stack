@@ -4,7 +4,7 @@ version: "3.1"
 
 services:
   s3:
-    image: tomasbisi/s3server:test2
+    image: tomasbisi/s3server:latest
     ports:
       - "8000:8000"
       - "8100:8100"
