@@ -1,0 +1,16 @@
+---
+
+version: "3.1"
+
+services:
+  s3:
+    image: tomasbisi/s3server:test2
+    ports:
+      - "8000:8000"
+      - "8100:8100"
+    command: npm start
+
+  cache:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
