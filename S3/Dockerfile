@@ -8,7 +8,7 @@ RUN apt-get update \
     && mkdir -p /var/log/supervisor
 
 WORKDIR /opt/s3
-RUN git clone -b 42-hackathon-utapi https://github.com/JibranKalia/S3.git 
+RUN git clone https://github.com/scality/S3 -b 42-hackathon-utapi
 WORKDIR /opt/s3/S3
 RUN npm install
 
