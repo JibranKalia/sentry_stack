@@ -11,6 +11,13 @@ services:
     networks:
       - backend
 
+  zenkoders:
+    image: tomasbisi/zenkoders
+    ports:
+      - "8080:8080"
+    networks:
+      - backend
+
   cache:
     image: redis:alpine
     ports:
