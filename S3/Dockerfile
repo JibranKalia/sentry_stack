@@ -17,7 +17,7 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 VOLUME ["/data","/metadata"]
 
-EXPOSE 8000
+EXPOSE 8000 8100
 
 ENTRYPOINT ["/opt/s3/S3/docker-entrypoint.sh"]
 CMD supervisord -c /etc/supervisor/supervisord.conf -n
