@@ -11,10 +11,24 @@ services:
     networks:
       - backend
 
-  zenkoders:
-    image: tomasbisi/zenkoders
+  sentry_backend:
+    image: tomasbisi/sentry_backend
     ports:
-      - "8080:8080"
+      - "8200:8200"
+    networks:
+      - backend
+
+  dynamodb:
+    image: dwmkerr/dynamodb
+    ports:
+        - "8300:8300"
+    networks:
+        - backend
+
+  sentry_frontend:
+    image: tomasbisi/sentry_frontend
+    ports:
+      - "8400:8400"
     networks:
       - backend
 
