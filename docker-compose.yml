@@ -19,11 +19,11 @@ services:
       - backend
 
   dynamodb:
-    image: dwmkerr/dynamodb
+    image: jibrankalia/dynamodb
     ports:
-        - "8300:8300"
+      - "8300:8300"
     networks:
-        - backend
+      - backend
 
   sentry_frontend:
     image: tomasbisi/sentry_frontend
