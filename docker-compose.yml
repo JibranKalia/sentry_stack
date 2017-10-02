@@ -3,39 +3,39 @@
 version: "3.1"
 
 services:
-  s3:
-    image: tomasbisi/s3server:supervisorcache
+  frontend:
+    image: tomasbisi/sentry_frontend:production
     ports:
-      - "8000:8000"
-      - "8100:8100"
+      - "5000:5000"
     networks:
       - backend
 
-  sentry_backend:
+  s3:
+    image: tomasbisi/s3server:supervisorcache
+    ports:
+      - "8000"
+      - "8100"
+    networks:
+      - backend
+
+  backend:
     image: tomasbisi/sentry_backend
     ports:
-      - "8200:8200"
+      - "8200"
     networks:
       - backend
 
   dynamodb:
     image: jibrankalia/dynamodb
     ports:
-      - "8300:8300"
-    networks:
-      - backend
-
-  sentry_frontend:
-    image: tomasbisi/sentry_frontend
-    ports:
-      - "8400:8400"
+      - "8300"
     networks:
       - backend
 
   cache:
     image: redis:alpine
     ports:
-      - "6379:6379"
+      - "6379"
     networks:
       - backend
 
