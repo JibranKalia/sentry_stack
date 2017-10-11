@@ -44,12 +44,12 @@ on our Zenko stack:
 ```
 $ export AWS_ACCESS_KEY_ID=accessKey1
 $ export AWS_SECRET_ACCESS_KEY=verySecretKey1
-$ aws s3 --endpoint http://localhost mb s3://bucket1 --region=us-east-1
-make_bucket: bucket1
-$ aws s3 --endpoint http://localhost ls
-2017-06-15 16:42:58 bucket1
-$ aws s3 --endpoint http://localhost cp README.md s3://bucket1
+$ aws s3 --endpoint http://192.168.99.100:8000 mb s3://utapi-bucket --region=us-east-1
+make_bucket: utapi-bucket
+$ aws s3 --endpoint http://192.168.99.100:8000 ls
+2017-06-15 16:42:58 utapi-bucket
+$ aws s3 --endpoint http://192.168.99.100:8000 cp README.md s3://utapi-bucket
 upload: ./README.md to s3://bucket1/README.md
-$ aws s3 --endpoint http://localhost ls s3://bucket1
+$ aws s3 --endpoint http://192.168.99.100:8000 ls s3://bucket1
 2017-06-15 17:36:10       1510 README.md
 ```
