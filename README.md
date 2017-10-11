@@ -27,7 +27,6 @@ Check that the services are up:
 
 ```
 $ docker stack services sentry
-ID            NAME              MODE        REPLICAS  IMAGE
 ID                  NAME                MODE                REPLICAS            IMAGE                                PORTS
 926t3wn0ly1g        sentry_s3           replicated          1/1                 tomasbisi/s3server:supervisorcache   *:0->8100/tcp,*:8000->8000/tcp
 aziwhvicugnd        sentry_frontend     replicated          1/1                 tomasbisi/sentry_frontend:latest     *:5000->5000/tcp
