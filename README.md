@@ -41,8 +41,8 @@ Website is live on: http://192.168.99.100:5000/
 
 Using [awscli](https://aws.amazon.com/cli/), we can perform S3 operations
 on our Zenko stack:
- > IMPORTANT: when using default port 80, it should never be specified after the
- > endpoint address. If using a custom port, it must be specified.
+ > IMPORTANT: 192.168.99.100 is the docker-machine ip in the example. 
+ > Your ip might be different.
 ```
 $ export AWS_ACCESS_KEY_ID=accessKey1
 $ export AWS_SECRET_ACCESS_KEY=verySecretKey1
