@@ -13,14 +13,14 @@ services:
       - backend
 
   frontend:
-    image: tomasbisi/sentry_frontend:final2
+    image: tomasbisi/sentry_frontend
     ports:
       - "5000:5000"
     networks:
       - backend
 
   backend:
-    image: tomasbisi/sentry_backend:final
+    image: tomasbisi/sentry_backend
     ports:
       - "8200:8200"
     networks:
