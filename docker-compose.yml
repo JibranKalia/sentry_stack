@@ -3,25 +3,26 @@
 version: "3.1"
 
 services:
+
+  s3:
+    image: tomasbisi/s3server:supervisorcache
+    ports:
+      - "8000:8000"
+      - "8100"
+    networks:
+      - backend
+
   frontend:
-    image: tomasbisi/sentry_frontend:production
+    image: tomasbisi/sentry_frontend:final2
     ports:
       - "5000:5000"
     networks:
       - backend
 
-  s3:
-    image: tomasbisi/s3server:supervisorcache
-    ports:
-      - "8000"
-      - "8100"
-    networks:
-      - backend
-
   backend:
-    image: tomasbisi/sentry_backend
+    image: tomasbisi/sentry_backend:final
     ports:
-      - "8200"
+      - "8200:8200"
     networks:
       - backend
 
