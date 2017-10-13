@@ -3,6 +3,14 @@
 This docker service stack describes a simple Sentry with Zenko S3 setup for quick testing
 with non-production data.
 
+## Sentry Repos
+
+[SENTRY Stack](https://github.com/JibranKalia/sentry_stack.git)
+
+[SENTRY FrontEnd](https://github.com/tomasbisi/zenko_ui_frontend.git)
+
+[SENTRY BackEnd](https://github.com/JibranKalia/sentry_backend.git)
+
 ## Preparing
 
 Swarm mode needs to be enabled on the local docker daemon. See
