@@ -10,35 +10,35 @@ services:
       - "8000:8000"
       - "8100"
     networks:
-      - backend
+      - connect
 
   frontend:
-    image: tomasbisi/sentry_frontend
+    image: tomasbisi/sentry_frontend:test4
     ports:
       - "5000:5000"
     networks:
-      - backend
+      - connect
 
   backend:
     image: tomasbisi/sentry_backend
     ports:
       - "8200:8200"
     networks:
-      - backend
+      - connect
 
   dynamodb:
     image: jibrankalia/dynamodb
     ports:
       - "8300"
     networks:
-      - backend
+      - connect
 
   cache:
     image: redis:alpine
     ports:
       - "6379"
     networks:
-      - backend
+      - connect
 
 networks:
-  backend:
+  connect:
